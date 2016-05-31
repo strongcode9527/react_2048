@@ -1,0 +1,167 @@
+body {
+  background: #EEEED1; }
+
+.grid {
+  background: #FFEC8B;
+  width: 305px;
+  height: 305px;
+  margin: 150px auto; }
+  .grid .grid_part {
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    margin-top: 5px;
+    background: #CDBE70;
+    float: left; }
+
+.position0 {
+  top: 5px;
+  left: 5px; }
+
+.position1 {
+  top: 5px;
+  left: 80px; }
+
+.position2 {
+  top: 5px;
+  left: 155px; }
+
+.position3 {
+  top: 5px;
+  left: 230px; }
+
+.position4 {
+  top: 80px;
+  left: 5px; }
+
+.position5 {
+  top: 80px;
+  left: 80px; }
+
+.position6 {
+  top: 80px;
+  left: 155px; }
+
+.position7 {
+  top: 80px;
+  left: 230px; }
+
+.position8 {
+  top: 155px;
+  left: 5px; }
+
+.position9 {
+  top: 155px;
+  left: 80px; }
+
+.position10 {
+  top: 155px;
+  left: 155px; }
+
+.position11 {
+  top: 155px;
+  left: 230px; }
+
+.position12 {
+  top: 230px;
+  left: 5px; }
+
+.position13 {
+  top: 230px;
+  left: 80px; }
+
+.position14 {
+  top: 230px;
+  left: 155px; }
+
+.position15 {
+  top: 230px;
+  left: 230px; }
+
+.tile {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 70px;
+  z-index: 12;
+  margin: 0px;
+  font-weight: bold; }
+
+.value2 {
+  background: red; }
+
+#container {
+  width: 305px;
+  height: 305px;
+  position: absolute; }
+
+#container_ {
+  width: 305px;
+  height: 305px;
+  position: absolute; }
+
+.value2 {
+  background: #EEE4DA; }
+
+.value4 {
+  background: #EAE0C8; }
+
+.value8 {
+  background: #F59563; }
+
+.value16 {
+  background: #3399ff; }
+
+.value32 {
+  background: #ffa333; }
+
+.value64 {
+  background: #cef030; }
+
+.value128 {
+  background: #E8D8CE; }
+
+.value256 {
+  background: #990303; }
+
+.value512 {
+  background: #6BA5DE; }
+
+.value1024 {
+  background: #DCAD60; }
+
+.value2048 {
+  background: #B60022; }
+
+.total_score {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  top: -80px;
+  left: 300px;
+  background: #EE82EE;
+  font-weight: bold; }
+
+.finish {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 999;
+  background: #FF8C69;
+  position: absolute;
+  text-align: center;
+  line-height: 500px;
+  top: 0; }
+
+.finish_again {
+  width: 100%;
+  position: absolute;
+  top: 150px;
+  text-align: center;
+  cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */

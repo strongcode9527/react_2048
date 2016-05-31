@@ -1,0 +1,122 @@
+$colors:  #EEE4DA, 
+          #EAE0C8, 
+          #F59563, 
+          #3399ff, 
+          #ffa333, 
+          #cef030, 
+          #E8D8CE, 
+          #990303,
+          #6BA5DE, 
+          #DCAD60, 
+          #B60022; 
+
+$n:1;
+
+body{
+	background:#EEEED1;
+}
+.grid{      
+	background:#FFEC8B;
+	width:305px;
+	height:305px;
+    margin:150px auto;
+  
+	
+		.grid_part{   
+			width:70px;
+			height:70px;
+			margin-left:5px; 
+			margin-top:5px;
+			background:#CDBE70;
+			float:left;
+		}
+	
+
+}
+@for $x from 0 through 15{
+	
+		.position#{$x}{
+			
+			top:floor($x/4+1)*5 + floor($x/4)*70px;
+			left:($x%4+1)*5  + ($x%4) * 70px;
+		   
+
+		}
+	
+		
+}
+
+.tile{
+	    position:absolute;
+		width:70px;
+		height: 70px; 
+		font-size: 20px;
+		text-align:center; 
+		line-height:70px;
+		z-index: 12;
+		margin:0px;
+		font-weight:bold;
+}
+
+
+.value2{
+	background:red;
+	
+	
+}
+#container{
+	width:305px;
+	height:305px;
+	position:absolute;
+}
+#container_{
+	width:305px;
+	height:305px;
+	position: absolute;
+	
+}
+
+
+ @for $i from 1 through 11 {
+
+     .value#{$n*2} {
+
+        background: nth($colors, $i);
+      }
+      $n:$n*2;
+}
+
+
+
+.total_score{
+	width:150px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
+	top:-80px;
+	left:300px;
+	background:#EE82EE;
+	font-weight:bold;
+}
+
+.finish{
+	width:100%;
+	height:100%;
+	display:none;
+	z-index:999;
+	background:#FF8C69;
+	position:absolute;
+	text-align: center;
+	line-height:500px;
+	top:0;
+}
+
+.finish_again{
+	width:100%;
+	position:absolute;
+	top:150px;
+	text-align:center;
+	cursor:pointer;
+
+}
