@@ -69,7 +69,21 @@ var Game = React.createClass({
 	
 	},
 	newGame:function(){
-		
+		var tiles_ = Array(16);
+		var num,sum = 0;
+		while(sum !== 2){
+			num = this.getRandomNum(16);
+			if(tiles_[num] >= 0 )continue;
+			else{
+				tiles_[num] =2;
+				sum++;
+			}
+		}
+
+		this.setState({
+			tiles:tiles_
+		})
+
 	},
 	render:function(){
 		
@@ -99,6 +113,8 @@ var Game = React.createClass({
 		
         var direc = e.which;
         var flag = false;
+        //用于判断网格是否满了，也就是游戏是否已经结束，失败。
+        var flag_ = false;
         var newCreate = [];
 			for(var i = (direc <= 38 ? 1:2); i >= 0&&i<=3;direc <= 38 ? i++:i--){
 				for( var j = 0 ; j < 4; j++){
@@ -165,7 +181,17 @@ var Game = React.createClass({
 			console.log(tiles_);
 			
 				
-	
+	  tiles_.forEach(function(e,index){
+	  		if(e == undefined){
+	  			flag_ = true;
+	  			return;
+	  		}
+	  });
+	  if(!flag_){
+	  		alert("游戏失败");
+	  		this.newGame();
+	  		return;
+	  }
 
 		this.setState({
 			tiles:tiles_
